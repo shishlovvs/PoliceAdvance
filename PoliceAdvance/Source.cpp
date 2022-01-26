@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 #include<string>
 #include<map>
 #include<Windows.h>
@@ -10,17 +10,17 @@ using std::endl;
 
 const std::map<int, std::string>& crimes =
 {
-	std::pair<int, std::string>(1, "превышение скорости"),
-	std::pair<int, std::string>(2, "проезд на красный"),
-	std::pair<int, std::string>(3, "парковка в неположенном месте"),
-	std::pair<int, std::string>(4, "оскорбление офицера"),
-	std::pair<int, std::string>(5, "пересечение сплошной линии"),
+	std::pair<int, std::string>(1, "РїСЂРµРІС‹С€РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё"),
+	std::pair<int, std::string>(2, "РїСЂРѕРµР·Рґ РЅР° РєСЂР°СЃРЅС‹Р№"),
+	std::pair<int, std::string>(3, "РїР°СЂРєРѕРІРєР° РІ РЅРµРїРѕР»РѕР¶РµРЅРЅРѕРј РјРµСЃС‚Рµ"),
+	std::pair<int, std::string>(4, "РѕСЃРєРѕСЂР±Р»РµРЅРёРµ РѕС„РёС†РµСЂР°"),
+	std::pair<int, std::string>(5, "РїРµСЂРµСЃРµС‡РµРЅРёРµ СЃРїР»РѕС€РЅРѕР№ Р»РёРЅРёРё"),
 };
 
 class Crime
 {
-	std::string crime;	//правонарушение
-	std::string place;	//место совершения правонарушения
+	std::string crime;	//РїСЂР°РІРѕРЅР°СЂСѓС€РµРЅРёРµ
+	std::string place;	//РјРµСЃС‚Рѕ СЃРѕРІРµСЂС€РµРЅРёСЏ РїСЂР°РІРѕРЅР°СЂСѓС€РµРЅРёСЏ
 public:
 	const std::string& get_crime()const
 	{
@@ -71,9 +71,9 @@ void main()
 	SetConsoleOutputCP(1251);
 	std::map<std::string, std::list<Crime>> base =
 	{
-		std::pair<std::string, std::list<Crime>>("m777ko", std::list<Crime>{Crime("Превышение скорости", "ул.Ленина"), Crime("Проезд на красный", "ул.Октябрьская")}),
-		std::pair<std::string, std::list<Crime>>("b510mk",std::list<Crime>{Crime("Парковка в неположенном месте", "ТЦ Экватор")}),
-		std::pair<std::string, std::list<Crime>>("a231bb",std::list<Crime>{Crime("Оскорбление полицейского", "Красная площадь")})
+		std::pair<std::string, std::list<Crime>>("m777ko", std::list<Crime>{Crime("РџСЂРµРІС‹С€РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё", "СѓР».Р›РµРЅРёРЅР°"), Crime("РџСЂРѕРµР·Рґ РЅР° РєСЂР°СЃРЅС‹Р№", "СѓР».РћРєС‚СЏР±СЂСЊСЃРєР°СЏ")}),
+		std::pair<std::string, std::list<Crime>>("b510mk",std::list<Crime>{Crime("РџР°СЂРєРѕРІРєР° РІ РЅРµРїРѕР»РѕР¶РµРЅРЅРѕРј РјРµСЃС‚Рµ", "РўР¦ Р­РєРІР°С‚РѕСЂ")}),
+		std::pair<std::string, std::list<Crime>>("a231bb",std::list<Crime>{Crime("РћСЃРєРѕСЂР±Р»РµРЅРёРµ РїРѕР»РёС†РµР№СЃРєРѕРіРѕ", "РљСЂР°СЃРЅР°СЏ РїР»РѕС‰Р°РґСЊ")})
 	};
 	print(base);
 	/*for (std::list<Crime>::iterator it = base["m777ko"].begin(); it != base["m777ko"].end(); ++it)
@@ -82,8 +82,8 @@ void main()
 	}*/
 	std::string licence_plate;
 	Crime crime;
-	cout << "Введите номер автомобиля: "; cin >> licence_plate;
-	cout << "Введите правонарушение: "; cin >> crime;
+	cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р°РІС‚РѕРјРѕР±РёР»СЏ: "; cin >> licence_plate;
+	cout << "Р’РІРµРґРёС‚Рµ РїСЂР°РІРѕРЅР°СЂСѓС€РµРЅРёРµ: "; cin >> crime;
 	base[licence_plate].push_back(crime);
 	print(base);
 }
